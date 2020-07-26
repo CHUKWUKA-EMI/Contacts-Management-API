@@ -39,6 +39,10 @@ app.use(_express2.default.json());
 app.use("/", _customersRoute2.default);
 app.use("/staff", _staffRoute2.default);
 
+app.get("/", (req, res) => {
+  res.send("WELCOME TO CONTACTS MANAGEMENT API");
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(5000, async () => {

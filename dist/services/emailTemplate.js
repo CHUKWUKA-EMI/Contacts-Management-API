@@ -24,7 +24,7 @@ const template = (staff) => {
   const token = _jsonwebtoken2.default.sign({ id: staff.id }, JWT_SECRET, {
     expiresIn: "24h",
   });
-  const url = `http://localhost:5000/staff/verify/${token}`;
+  const url = `https://customers-contacts-manager.herokuapp.com//staff/verify/${token}`;
 
   const html = `
      <!DOCTYPE html>
