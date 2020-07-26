@@ -16,6 +16,10 @@ app.use(express.json());
 app.use("/", customersRoute);
 app.use("/staff", staffRoute);
 
+app.get("/", (req, res) => {
+  res.send("WELCOME TO CONTACTS MANAGEMENT API");
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(5000, async () => {
