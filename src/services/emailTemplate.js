@@ -7,7 +7,7 @@ const { JWT_SECRET } = process.env;
 
 const template = (staff) => {
   const token = jwt.sign({ id: staff.id }, JWT_SECRET, { expiresIn: "24h" });
-  const url = `https://customers-contacts-manager.herokuapp.com//staff/verify/${token}`;
+  const url = `https://customers-contacts-manager.herokuapp.com/staff/verify/${token}`;
 
   const html = `
      <!DOCTYPE html>
