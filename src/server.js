@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT || 5000;
 
-app.listen(5000, async () => {
+app.listen(port, async () => {
   console.log(`Server listening on Port ${port}`);
   try {
     await sequelize.authenticate({ logging: false });
